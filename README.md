@@ -1,3 +1,5 @@
+## This project is old and may not reflect my current skills or style. Take it with a grain of salt.
+
 # NBTHelper
 
 An attempt to help editing any nbt tag in-game in real time, which got ran over by updates.
