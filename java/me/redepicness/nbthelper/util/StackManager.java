@@ -1,11 +1,11 @@
 package me.redepicness.nbthelper.util;
 
-import net.minecraft.server.v1_10_R1.NBTTagCompound;
-import net.minecraft.server.v1_10_R1.NBTTagList;
-import net.minecraft.server.v1_10_R1.NBTTagString;
+import net.minecraft.server.v1_14_R1.NBTTagCompound;
+import net.minecraft.server.v1_14_R1.NBTTagList;
+import net.minecraft.server.v1_14_R1.NBTTagString;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_10_R1.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_14_R1.inventory.CraftItemStack;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -120,7 +120,7 @@ public class StackManager {
     }
 
     public ItemStack get(){
-        net.minecraft.server.v1_10_R1.ItemStack s = CraftItemStack.asNMSCopy(stack);
+        net.minecraft.server.v1_14_R1.ItemStack s = CraftItemStack.asNMSCopy(stack);
         s.setTag(tag);
         stack = CraftItemStack.asCraftMirror(s);
         updateMeta();
@@ -132,7 +132,7 @@ public class StackManager {
     }
 
     private NBTTagCompound getTag(){
-        net.minecraft.server.v1_10_R1.ItemStack s = CraftItemStack.asNMSCopy(stack);
+        net.minecraft.server.v1_14_R1.ItemStack s = CraftItemStack.asNMSCopy(stack);
         NBTTagCompound tag;
         if (!s.hasTag()) {
             tag = new NBTTagCompound();
